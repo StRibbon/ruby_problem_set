@@ -83,13 +83,13 @@
 # mult_table
 
 def reverse_string
-  s = "reverse_me"
-  i = s.length
- 	for i in s
- 		print s[i]
- 		i -= 1
+  puts "Enter your string"
+  str = gets.chomp.to_s
+  mid = str.length/2
+ 	(0...mid).each do |i|
+ 	  str[i], str[-i-1] = str[-i-1], str[i]
  	end
- end
- 
-reverse_string
+  puts str
+end
 
+reverse_string
